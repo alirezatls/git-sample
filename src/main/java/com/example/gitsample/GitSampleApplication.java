@@ -1,7 +1,9 @@
 package com.example.gitsample;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class GitSampleApplication {
@@ -10,4 +12,10 @@ public class GitSampleApplication {
         SpringApplication.run(GitSampleApplication.class, args);
     }
 
+    @Bean
+    CommandLineRunner commandLineRunner() {
+        return args -> {
+            System.out.println("this is a test");
+        };
+    }
 }
